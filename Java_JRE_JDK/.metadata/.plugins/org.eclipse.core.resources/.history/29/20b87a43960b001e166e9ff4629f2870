@@ -1,0 +1,18 @@
+package banco;
+
+// representar una entidad, clase o conjunto
+public class Cuenta {
+	
+      double saldo;
+		int agencia;
+		int numero;
+		String titular;
+		
+		// la palabra reservada void => ejecuta el motodo
+		public void depositar(double valor){
+			// suma el saldo + el valor
+			saldo += valor; // es lo mismo que => saldo = saldo + valor;
+		}
+		
+
+}

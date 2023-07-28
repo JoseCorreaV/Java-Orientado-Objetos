@@ -1,0 +1,44 @@
+package java_pila_ejecucion;
+
+public class flujo {
+
+	public static void main(String[] args) {
+
+	    System.out.println("Ini do main");
+	    metodo1();
+	    System.out.println("Fim do main");
+	}
+
+	public static void metodo1() {
+		System.out.println("Ini do metodo1");
+		metodo2();
+		System.out.println("Fim do metodo1");
+	}
+
+	public static void metodo2() throws ArithmeticException {
+		System.out.println("Ini do metodo2");
+		/* for (int i = 1; i <= 5; i++) {
+			System.out.println(i);
+			
+			// SI SABEMos que puede imprimir error utilizar el try
+			try {
+				int num = 0;
+				int resultado = i/num;
+				System.out.println(resultado)	;
+				
+			} catch (ArithmeticException | NullPointerException e) {
+				// imprimir la causa del error o mensaje
+				e.printStackTrace();
+				System.out.println("");
+			System.err.println(e.getMessage());
+			}// aqui puedo capturar otro tipo de error o poner en el catch | + el tipo de error + variable
+		}*/
+		// lanzar una exepción
+		ArithmeticException ae = new ArithmeticException();
+		//throw = lazar exepción
+		throw ae;
+		
+		
+		System.out.println("Fim do metodo2");
+	}
+}

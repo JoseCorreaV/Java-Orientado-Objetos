@@ -1,0 +1,32 @@
+package banco;
+
+public class Metodos {
+	
+	public static void main(String[] args) {
+		// creamos un objeto llamado Micuenta
+		Cuenta Micuenta = new Cuenta();
+		Micuenta.saldo = 300;
+		
+		//llamar un metodo
+		Micuenta.depositar(2000);
+		System.out.println("Mi saldo despues de depositar: "+Micuenta.saldo);
+		
+		Micuenta.retirar(400);
+		System.out.println("Mi saldo despues de retirar: "+Micuenta.saldo);
+		
+		
+		
+		Cuenta CuentaGian = new Cuenta();
+		CuentaGian.depositar(5000);
+		
+		if(CuentaGian.transferir(1000,Micuenta))
+		{
+			System.out.println("Trasferencia exitosa");
+		}		
+		
+		System.out.println("\n Mi nuevo saldo: "+Micuenta.saldo);
+		System.out.println("\n El Saldo Gimena luego de trasferirme: "+CuentaGian.saldo);
+		
+	}
+
+}

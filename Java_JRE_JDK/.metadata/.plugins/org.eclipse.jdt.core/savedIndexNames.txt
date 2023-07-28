@@ -1,0 +1,4 @@
+INDEX VERSION 1.132+D:\Documentos\Grupo-5-ONE-Oracle-Next-Education\Backend\Java Orientado a Objetos G5 - ONE\Java_JRE_JDK\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+3152010119.index
+2560502377.index

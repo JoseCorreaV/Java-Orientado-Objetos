@@ -1,0 +1,150 @@
+package com.herencias_interfaces.Modelo;
+
+//esta clase es actracta por la entidad requiere ser definida por un tipo
+/**
+ * @author JoseCorrea
+ *
+ */
+public abstract class Cuenta {
+
+	// protected => para ser utilizado por las clases hijas.
+	protected double saldo;
+	private int agencia = 1;
+	private int numero;
+	// adquirir desde x entidad los datos del cliente
+	private Cliente titular = new Cliente();
+
+	// static no hace parte de la instancia
+	// static => la variable o metodo no sera alterado por la instancia
+	private static int total = 0;
+
+	public Cuenta() {
+
+	}
+
+	public Cuenta(int agencia, int numero) {
+
+		this.agencia = agencia;
+		this.numero = numero;
+
+		if (agencia <= 0) {
+			System.out.println("no permite 0");
+			this.agencia = 1;
+		} else {
+			this.agencia = agencia;
+		}
+		Cuenta.total++;
+		System.out.println("Creacion de cuenta N: " + numero);
+
+	}
+
+	// la palabra reservada void => ejecuta el motodo
+	public abstract void depositar(double saldo);
+
+	/*
+	 * { // this. parabra reservada de java para hacer referencia al atributo de la
+	 * clase // suma el this.saldo + saldo del parametro del metodo this.saldo +=
+	 * saldo; // es lo mismo que => this.saldo = thi.ssaldo + valor; }
+	 */
+
+	public void retirar(double valor)throws SaldoException {
+
+		// regla de negocio para cuando no hay saldo
+		if(this.saldo < valor) {
+			throw new SaldoException("No tiene saldo");
+		}
+			this.saldo -= valor;
+		
+	}
+
+	// podemos ponerle a la clase como parametro la cuenta
+	public boolean transferir(double valor, Cuenta NameCuenta) {
+
+		// comprobar si tengo saldo suficiente para debitar
+		if (this.saldo >= valor) {
+			// Le quito a mi saldo el valor que voy a trasferir
+			try {
+				this.retirar(valor);
+			} catch (SaldoException e) {
+				e.printStackTrace();
+			} 
+			// esta operación ya existe por ende es mejor llamar el metodo que utiliza esta
+			// operación
+			// NameCuenta.saldo += valor;
+
+			// deposito el valor a la nueva cuenta
+			NameCuenta.depositar(valor);
+			// interrumpe la ejecución y sale del metodo
+			return true;
+		}
+
+		return false;
+
+	}
+
+	// setter
+
+	/*
+	 * este es mejor el metodoto depositar public void setSaldo(double saldo) { if
+	 * (agencia > 0) { this.saldo = saldo; } }
+	 */
+
+	public void setNumero(int numero) {
+		if (agencia > 0) {
+			this.numero = numero;
+		}
+
+	}
+
+	public void setTitular(Cliente titular) {
+		this.titular = titular;
+	}
+
+	// getter
+
+	public double getSaldo() {
+		return this.saldo;
+	}
+
+	public int getAgencia() {
+		return this.agencia;
+	}
+
+	public int getNumero() {
+		return this.numero;
+	}
+
+	public Cliente getTitular() {
+		return this.titular;
+	}
+
+	public static int getTotal() {
+		return total;
+	}
+	
+	
+	// Imprimir el numero de la cuenta y la agencia
+	@Override
+	public String toString() {
+		// Para imprimir los valores de la ubicación seleccioanda
+		String Cuenta = "Numero: " + this.numero + ", Agencia: "+ this.agencia;
+		return Cuenta;
+	}
+	
+	
+	public boolean equals(Cuenta cuenta) {
+		return this.agencia == cuenta.getAgencia() &&
+				this.numero == cuenta.getNumero();
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		Cuenta cuenta = (Cuenta) obj;
+
+		return this.agencia == cuenta.getAgencia() &&
+				this.numero == cuenta.getNumero();	
+	}
+
+
+}
+

@@ -1,0 +1,21 @@
+package herencias_interfaces;
+
+/*  para no repetir los mismos datos en otras entidades se realiza la herencia
+ *  en java se usa la plabra reservada extends para HEREDAR 
+ * */
+
+
+
+public class generente extends Funcionario {
+	
+	private String clave;
+	
+	public void setClave (String clave) {
+		this.clave = clave;
+	}
+	
+	public boolean iniciarSesión(String clave) {
+		return clave == "jaha";
+	}
+
+}

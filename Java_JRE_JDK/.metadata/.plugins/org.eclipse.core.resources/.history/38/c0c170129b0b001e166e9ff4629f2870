@@ -1,0 +1,51 @@
+package banco;
+
+// representar una entidad, clase o conjunto
+public class Cuenta {
+	
+      double saldo;
+		int agencia;
+		int numero;
+		String titular;
+		
+		// la palabra reservada void => ejecuta el motodo
+		public void depositar(double saldo){
+			// this. parabra reservada de java para hacer referencia al atributo de la clase
+			// suma el this.saldo + saldo del parametro del metodo 
+			this.saldo += saldo; // es lo mismo que => this.saldo = thi.ssaldo + valor;
+		}
+		
+		
+		public boolean retirar(double valor){
+			
+			if(this.saldo >= valor) {
+				this.saldo -= valor;
+				return true;
+			}else {
+				return false;
+			}
+			
+		}
+		
+		
+		// podemos ponerle a la clase como parametro la cuenta
+		public boolean transferir (double valor, Cuenta NameCuenta) {
+			
+			// comprobar si tengo saldo suficiente para debitar
+			if(this.saldo >= valor) {
+				// Le quito a mi saldo el valor que voy a trasferir
+				this.saldo -= valor;
+				// esta operación ya existe por ende es mejor llamar el metodo que utiliza esta operación
+				//NameCuenta.saldo += valor;
+				
+				// deposito el valor  a la nueva cuenta
+				NameCuenta.depositar(valor);
+				
+				return true;
+			}else {
+				return false;
+			}
+			
+		}
+
+}

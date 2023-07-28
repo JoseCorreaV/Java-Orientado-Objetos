@@ -1,0 +1,33 @@
+package com.herencias_interfaces.test;
+
+import java.util.ArrayList;
+import com.herencias_interfaces.Modelo.*;
+
+public class testArrayList {
+
+	public static void main(String[] args) {
+		// el operador diamante <> en el arraylist sirve para forzar a aceptar el tipo de objeto.
+		// ventajas: permite identificar automaticamente los tipos de datos no permitidos 
+		ArrayList<Cuenta> lista = new ArrayList<>();
+		Cuenta cc = new CuentaCorriente(11,22);
+		Cuenta cc2 = new CuentaCorriente(10,24);
+		
+		lista.add(cc);
+		lista.add(cc2);
+
+		
+		Cuenta obtenerCuenta  = lista.get(0);
+		System.out.println(obtenerCuenta);
+		
+		
+		for(int i = 0; i< lista.size(); i++) {
+			System.out.println("Array "+i+": "+ lista.get(i));
+		}
+		
+		// por cada cuenta (: = en) la lista
+		for(Cuenta cuenta :  lista) {
+			System.out.println(cuenta);
+		}
+		
+	}
+}

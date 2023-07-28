@@ -1,0 +1,15 @@
+package banco;
+
+public class Metodos {
+	
+	public static void main(String[] args) {
+		// creamos un objeto llamado Micuenta
+		Cuenta Micuenta = new Cuenta();
+		Micuenta.saldo = 300;
+		
+		Micuenta.depositar(2000);
+		
+		System.out.println(Micuenta.saldo);
+	}
+
+}

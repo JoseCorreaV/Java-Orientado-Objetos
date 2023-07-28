@@ -1,0 +1,18 @@
+package banco;
+
+public class testReferencia {
+
+	public static void main(String[] args) {
+		Cuenta Cuenta1 = new Cuenta();
+		Cuenta1.saldo = 100;
+		
+		// cuenta2 apunta a cuenta1
+		Cuenta Cuenta2 = Cuenta1;
+		Cuenta2.saldo = 50;
+		
+		
+		System.out.println(Cuenta1.saldo +" -  " +Cuenta2.saldo );
+
+	}
+
+}

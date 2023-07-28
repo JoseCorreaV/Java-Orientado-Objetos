@@ -1,0 +1,15 @@
+package herencias_interfaces;
+
+public class ControlBonificaciones {
+
+	private double suma;
+
+	public double registroSalario(Funcionario funcionario) {
+		this.suma = funcionario.getBonificacion() + this.suma;
+		System.out.println("calculo actual: "+this.suma);
+		return this.suma;
+	}
+	
+	
+
+}

@@ -1,0 +1,58 @@
+package com.herencias_interfaces.test;
+
+public class testMainArray {
+	
+
+	public static void main(String[] args) {
+		// explicar el argumento args de la clase main
+		
+		for(int i = 0; i< args.length; i++) {
+			System.out.println("arguimento: "+ args[i]);
+		}
+		 
+		int edad = 20;
+		int edad2 = 30;
+		int edad3 = 40;
+		
+		/** ARRAYS
+		 *  1. podemos aisgnarle un tamaño
+		 *  2. INDICES: Numero de posición del array
+		 *  3. Todos los array inician en la posición  0
+		 */
+		
+		//                   Primera forma de crear un array
+		
+		// creamos un array con 5 indice
+		int[] edades = new int [5];
+		// en el indicie o posición 2 guardar el valor de 30
+		//  [0|0|30|0|0] =>  0,1,2,3,4
+		edades[2] = edad2;
+		
+		System.out.println("Edad: "+ edades[2]);
+		
+		// conocer el tamaño del array NameArray.length
+		int sizeArray = edades.length;
+		System.out.println("Size array: "+ sizeArray);
+		
+		// recorrer e imprimir un array
+		for(int i = 0; i< sizeArray; i++) {
+			System.out.println("Array: "+ edades[i]);
+		}
+		
+		//                    Segunda forma de crear un array
+		
+		System.out.println("\n ");
+		
+		int [] MyFinger = {1,2,3,4,5,5};
+		int MyF = MyFinger.length;
+		System.out.println("Size array: "+ MyF);
+		// recorrer e imprimir un array
+		for(int i = 0; i< MyF; i++) {
+			System.out.println("Array: "+ MyFinger[i]);
+		}
+		
+		//             
+		
+	}
+
+}

@@ -1,0 +1,11 @@
+package java_pila_ejecucion;
+
+public class Myexception extends RuntimeException {
+	
+	public Myexception() {
+		super();
+	} 
+	public Myexception(String mssg) {
+		super(mssg);
+	} 
+}

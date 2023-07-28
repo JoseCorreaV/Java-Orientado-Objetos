@@ -1,0 +1,10 @@
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="herencias_interfaces.Cuenta"><rhs name\="herencias_interfaces.CuentaCorriente"/><rhs name\="herencias_interfaces.CuentaAhorro"/></lhs><lhs name\="herencias_interfaces.CuentaCorriente"><rhs name\="herencias_interfaces.CuentaCorriente"/></lhs><lhs name\="herencias_interfaces.SistemaInterno"><rhs name\="herencias_interfaces.SistemaInterno"/></lhs><lhs name\="herencias_interfaces.FuncionarioAuth"><rhs name\="herencias_interfaces.Gerente"/><rhs name\="herencias_interfaces.Administrador"/></lhs><lhs name\="herencias_interfaces.Funcionario"><rhs name\="herencias_interfaces.Gerente"/><rhs name\="herencias_interfaces.Administrador"/></lhs><lhs name\="herencias_interfaces.Gerente"><rhs name\="herencias_interfaces.Gerente"/></lhs><lhs name\="herencias_interfaces.Administrador"><rhs name\="herencias_interfaces.Administrador"/></lhs><lhs name\="herencias_interfaces.AutenticacionUtil"><rhs name\="herencias_interfaces.AutenticacionUtil"/></lhs><lhs name\="com.herencias_interfaces.Modelo.Cuenta"><rhs name\="com.herencias_interfaces.Modelo.CuentaCorriente"/><rhs name\="com.herencias_interfaces.Modelo.CuentaAhorro"/></lhs><lhs name\="com.herencias_interfaces.Modelo.CuentaAhorro"><rhs name\="com.herencias_interfaces.Modelo.CuentaAhorro"/></lhs><lhs name\="com.herencias_interfaces.Modelo.guardaCuenta"><rhs name\="com.herencias_interfaces.Modelo.guardaCuenta"/></lhs><lhs name\="java.lang.constant.Constable"><rhs name\="java.lang.Integer"/><rhs name\="java.lang.Double"/></lhs><lhs name\="java.lang.constant.ConstantDesc"><rhs name\="java.lang.Integer"/><rhs name\="java.lang.Double"/></lhs><lhs name\="java.lang.Number"><rhs name\="java.lang.Integer"/><rhs name\="java.lang.Double"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=23
+spelling_locale_initialized=true
+typefilter_migrated_2=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

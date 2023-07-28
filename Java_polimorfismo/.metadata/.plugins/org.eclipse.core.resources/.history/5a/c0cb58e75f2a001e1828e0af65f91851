@@ -1,0 +1,33 @@
+package com.herencias_interfaces.test;
+
+public class testWrapper {
+
+	public static void main(String[] args) {
+		
+		/** wrapper
+		 * ¡Son clases que contienen funcionalidades y encapsulan la variable de tipo primitivo!
+		 * 
+		 */
+		
+		Double numeroDouble = 33.0;// autoboxing
+		Boolean trues = true;// autoboxing
+		
+		Double numeroDouble2 = Double.valueOf(33);
+		System.out.println(numeroDouble2);
+		
+		String numeroString = "43";
+		
+		Double stringToDouble = Double.valueOf(numeroString);
+		Double stringToInteger = Double.valueOf(numeroString);
+		
+		System.out.println(stringToDouble);
+		System.out.println(stringToInteger);
+		
+		// todo integer es un number
+		Number numero = Integer.valueOf(5);
+		double numeroDoublePrimit = numero.doubleValue(); // unboxing => de un objeto a primitivo
+		
+		Boolean falso = Boolean.FALSE
+		
+	}
+}

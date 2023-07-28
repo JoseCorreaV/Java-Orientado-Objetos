@@ -1,0 +1,18 @@
+package com.herencias_interfaces.test;
+
+import java.util.ArrayList;
+import com.herencias_interfaces.Modelo.*;
+
+public class testArrayList {
+
+	public static void main(String[] args) {
+		ArrayList lista = new ArrayList();
+		Cuenta cc = new CuentaCorriente(11,22);
+		Cuenta cc2 = new CuentaCorriente(10,24);
+		
+		lista.add(cc);
+		lista.add(cc2);
+		
+		
+	}
+}

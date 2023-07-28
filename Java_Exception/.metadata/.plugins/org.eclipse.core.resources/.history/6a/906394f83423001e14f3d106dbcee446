@@ -1,0 +1,20 @@
+package java_pila_ejecucion;
+
+public class testConexion {
+
+	public static void main(String[] args) {
+		Conexion con = new Conexion();
+		try {
+			con.leerDatos();
+		} catch (IllegalStateException e) {
+			System.out.println("Recibiendo la exepcion");
+			e.printStackTrace();
+		}// forzar una ejecución haya o no un try - catch
+		finally {
+			System.out.println("Ejecución forzosa con finally");
+			con.cerrar();
+		}
+
+	}
+
+}

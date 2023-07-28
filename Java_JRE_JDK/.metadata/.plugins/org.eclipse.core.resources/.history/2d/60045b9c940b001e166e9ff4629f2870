@@ -1,0 +1,9 @@
+package banco;
+
+public class Metodos {
+	
+	public int trasferir() {
+		
+	}
+
+}

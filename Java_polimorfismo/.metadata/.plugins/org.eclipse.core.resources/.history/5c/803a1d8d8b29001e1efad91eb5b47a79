@@ -1,0 +1,57 @@
+package com.herencias_interfaces.test;
+import com.herencias_interfaces.Modelo.*;
+
+public class testArrayRefents {
+
+	public static void main(String[] args) {
+		// crear 5 arrays de cuentas corriente   [new||cc||null||null||null ]
+				Object[] referencia = new Object[5];
+				
+				
+		CuentaCorriente cc = new CuentaCorriente(23,44);
+
+		
+		referencia[1] = cc;
+		
+		Cliente cliente = new Cliente();
+		referencia[4] = cliente;
+		
+	  // creamos una cuenta de ahorro
+		CuentaAhorro ca = new CuentaAhorro(20, 15);
+		// le asignamos la cuentacorriente
+		referencia[3] = ca;
+		
+		referencia[0] = new CuentaCorriente(11,99);
+		System.out.println(referencia[0]);
+		
+
+		System.out.println("\n CAST");
+		//           CAST => obligar al array cuentas agregar en el indice 1 una cuenta Corriente
+		// este CAST solo aplica para la cuentaCorriente 
+		CuentaCorriente cuentaC = (CuentaCorriente) referencia[1];
+		System.out.println(cuentaC);
+		
+		
+		
+		System.out.println("\n");
+		int sizeArray = referencia.length;
+		// recorrer e imprimir un array
+				for(int i = 0; i< sizeArray; i++) {
+					System.out.println("Array "+i+": "+ referencia[i]);
+				}
+				
+				
+				
+				
+				
+				
+				
+				
+				/*
+				// el mismo resultado => crea e imprime la cuenta
+				System.out.println(cc);
+				System.out.println(cuentas[1]); */
+
+	}
+
+}

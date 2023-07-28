@@ -1,0 +1,20 @@
+package herencias_interfaces;
+
+
+// explicación de polimorfismo
+public class testReferencia {
+
+	public static void main(String[] args) {
+		
+		// esto es permitido ya que gerente se extiende de funcionario
+		Funcionario funcionario = new Gerente();
+		funcionario.setNombre("valoyes");
+
+		Gerente gerente = new Gerente();
+		gerente.setNombre("correa");
+		
+		funcionario.setSalario(5000.0);
+		gerente.setSalario(10000.0);
+	}
+
+}

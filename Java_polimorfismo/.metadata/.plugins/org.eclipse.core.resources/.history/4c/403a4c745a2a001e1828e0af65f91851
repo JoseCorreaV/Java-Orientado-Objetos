@@ -1,0 +1,28 @@
+package com.herencias_interfaces.test;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class testRepasoArray {
+	/**
+	 * Repaso de arrays
+	 * 
+	 */
+	public static void main(String[] args) {
+		
+		int[] numero = new int[10];
+		// int => primitivo
+		int number = 40;
+		// Integer => objeto
+		// cuando algo esta tañado es que en algun momento lo van a quitar
+		Integer numberObject = (40);
+		
+		// recomendación declarar el tipo de variable de tipo objeto
+		List<Integer> lista = new ArrayList<>();
+		lista.add(number);// autoBoxing => convierte automaticamente el int primitivo a un objeto integer
+		lista.add(numberObject);
+		
+		sy
+	}
+
+}

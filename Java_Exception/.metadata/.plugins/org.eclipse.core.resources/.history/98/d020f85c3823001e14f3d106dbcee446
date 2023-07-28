@@ -1,0 +1,21 @@
+package java_pila_ejecucion;
+
+public class testConexion {
+
+	public static void main(String[] args) {
+		Conexion con = new Conexion();
+		// el try puede tener un catch, un finally o puede tener ambas(catch and finally)
+		try {
+			con.leerDatos();
+		} catch (IllegalStateException e) {
+			System.out.println("Recibiendo la exepcion");
+			e.printStackTrace();
+		}// forzar una ejecución haya o no un try - catch
+		finally {
+			System.out.println("Ejecucion forzosa con finally");
+			con.cerrar();
+		}
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package herencias_interfaces;
+
+public class testReferencia {
+
+	public static void main(String[] args) {
+		Funcionario funcionario = new Funcionario();
+		funcionario.setNombre("valoyes");
+
+		Gerente gerente = new Gerente();
+		gerente.setNombre("correa");
+		
+		funcionario.setSalario(5000.0);
+		gerente.setSalario(10000.0);
+	}
+
+}

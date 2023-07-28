@@ -1,0 +1,31 @@
+package banco;
+
+// representar una entidad, clase o conjunto
+public class Cuenta {
+	
+      double saldo;
+		int agencia;
+		int numero;
+		String titular;
+		
+		// la palabra reservada void => ejecuta el motodo
+		public void depositar(double saldo){
+			// this. parabra reservada de java para hacer referencia al atributo de la clase
+			// suma el this.saldo + saldo del parametro del metodo 
+			this.saldo += saldo; // es lo mismo que => this.saldo = thi.ssaldo + valor;
+		}
+		
+		
+		public boolean retirar(double valor){
+			
+			if(this.saldo >= valor) {
+				this.saldo -= valor;
+				return true;
+			}else {
+				return false;
+			}
+			
+		}
+		
+
+}

@@ -1,0 +1,16 @@
+package banco;
+
+public class CrearCuenta {
+	public static void main(String[] args) {
+		// instancia
+		Cuenta FirstCuenta = new Cuenta();
+		FirstCuenta.saldo = 1000;
+		System.out.println(FirstCuenta.saldo);
+		
+		// New => crea en tu memoria una nueva instancia
+		Cuenta SecondtCuenta = new Cuenta();
+		SecondtCuenta.saldo = 200;
+		System.out.println(SecondtCuenta.saldo);
+		
+}
+}

@@ -1,0 +1,55 @@
+package herencias_interfaces;
+
+public class test_entidades {
+
+	public static void main(String[] args) {
+/*                  test para funcionarios              */
+		
+		Funcionario Jose = new Funcionario();
+		Jose.setDocumento("Jose");
+		Jose.setDocumento("44563454");
+		Jose.setSalario(0);
+		Jose.setSalario(100.0);
+		
+		System.out.println("Salario: "+Jose.getSalario());
+		System.out.println("Bonificacion: "+Jose.getBonificacion());
+
+		
+/*                  test para gerente             */
+		System.out.println("\n\n");
+		
+		
+		Gerente gerente = new Gerente();
+		gerente.setSalario(5800.0);
+		gerente.setClave("java");
+		gerente.setTipo(1);
+		
+		System.out.println("Salario gerente: "+gerente.getSalario());
+		System.out.println("Bonificacion gerente: "+gerente.getBonificacion());
+		System.out.println("Inicio sesion: "+gerente.iniciarSesión("java"));
+		
+		
+		
+/*                  test para bonificaciones            */
+		System.out.println("\n\n");
+		
+		
+		Funcionario Diego = new Funcionario();
+		Diego.setSalario(2000.0);
+		
+		Gerente ximena = new Gerente();
+		ximena.setSalario(10000);
+		
+		contador alex = new contador();
+		alex.setSalario(5000);
+		
+		ControlBonificaciones cb = new ControlBonificaciones();
+		cb.registroSalario(Diego);
+		cb.registroSalario(ximena);
+		cb.registroSalario(alex);
+		
+	
+		
+	}
+
+}

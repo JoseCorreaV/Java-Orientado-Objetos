@@ -1,0 +1,29 @@
+package banco;
+
+public class testReferencia {
+
+	public static void main(String[] args) {
+		Cuenta Cuenta1 = new Cuenta();
+		Cuenta1.saldo = 100;
+		
+		// cuenta2 apunta a cuenta1
+		Cuenta Cuenta2 = Cuenta1;
+		Cuenta2.saldo = 50;
+		
+		// cuenta2 apunta a 50 y cuenta1 apunta a 50 tambien.
+		// debido a que se altero la instancia principal (Cuenta1)
+		System.out.println(Cuenta1.saldo +"   " +Cuenta2.saldo );
+		
+		// evidenciamos que la cuenta 1 y 2 estan en la misma ubicación en memoria
+		// System.out.println(Cuenta1 +"  " + Cuenta2);
+		
+		//condicionales
+		if(Cuenta1 == Cuenta2) {
+			System.out.println("Tienen la msima ubicación en memoria");
+		}else {
+			System.out.println("ubicaciones diferentes");
+		}
+
+	}
+
+}

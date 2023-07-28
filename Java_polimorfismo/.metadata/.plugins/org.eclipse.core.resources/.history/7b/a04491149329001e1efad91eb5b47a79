@@ -1,0 +1,20 @@
+package com.herencias_interfaces.Modelo;
+
+public class guardaCuenta {
+	/**
+	 *  crear un objeto para guardar cuentas
+	 *  agregar cuentas con un metodo
+	 */
+	
+	Cuenta[] cuenta = new Cuenta[10];
+	int indice = 0;
+
+	public void adicionar(Cuenta cc) {
+		// agregamos en la posición 0 la cuenta recibida en parametros.
+		cuenta[indice] = cc;
+		indice++;
+	}
+
+
+	
+}
