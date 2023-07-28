@@ -1,2 +1,2 @@
 # Java-Orientado-Objetos
- Certificación de alura LATAN
+ Certificación de alura LATAM
